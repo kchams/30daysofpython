@@ -99,11 +99,13 @@ class PersonAccount:
     def account_info(self):
         return f'{self.firstname} {self.lastname} has {self.incomes} and has spend {self.expenses}'
     
-    def add_income(self, income):
-        return self.incomes.append(income)
+    def add_income(self, key, val):
+        self.incomes[key] = val
+        return self.incomes
     
-    def add_expense(self, expense):
-        return self.incomes.append(expense)
+    def add_expense(self, key, val):
+        self.expenses[key] = val
+        return self.expenses
     
     def account_balance(self):
         return
@@ -113,4 +115,4 @@ person1 = PersonAccount('John', 'Doe', {'a':3, 'b':8}, {'a':4, 'b':2})
 print(person1.account_info())
 print(person1.total_income())
 print(person1.total_expense())
-#print(person1.add_income({'c':5}))
+print(person1.add_income('c', 5))
