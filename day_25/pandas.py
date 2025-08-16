@@ -14,6 +14,9 @@ last_five_rows = (df.tail())
 print(last_five_rows)
 
 #4. Get the title column as pandas series
-title = df.title()
+title = df.columns
+print(title)
 
 #5. Count the number of rows and columns
+rows_columns_number = df.shape()
+print(rows_columns_number)
